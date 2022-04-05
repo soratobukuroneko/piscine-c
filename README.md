@@ -1,4 +1,4 @@
-= How to run tests =
+# How to run tests
 
 You can use `run.sh` to run all the test for an exercice. It takes two parameters,
 the test suite to run and the root of your project. For instance, if you have your
