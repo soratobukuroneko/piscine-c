@@ -19,7 +19,7 @@ do
 			then
 				if [[ `"./$EXERCICE.bin" | diff "$i/test.out" -` ]]
 				then
-					echo "Test $EXERCICE failed !"
+					echo "Test $EXERCICE failed!"
 				else
 					echo "Test $EXERCICE passed!"
 				fi
