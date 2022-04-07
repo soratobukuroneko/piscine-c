@@ -7,8 +7,8 @@ EXERCICE_ROOT="$2"
 for i in "$TESTS_ROOT/$TESTS_SERIE"/*
 do
 	EXERCICE="${i##*/}"
-	SRC=`ls "$EXERCICE_ROOT/$EXERCICE"/ft_*.c`
-	if [[ -f "$SRC" ]]
+	SRC=`ls "$EXERCICE_ROOT/$EXERCICE"/ft_*.c 2>/dev/null`
+	if [[ -f "$SRC" && -f "$i/test.c" ]]
 	then
 		gcc -Wall -Wextra -Wpedantic -Werror "$EXERCICE_ROOT/$EXERCICE"/*.c \
 			"$i/test.c" -o "$EXERCICE.bin"
