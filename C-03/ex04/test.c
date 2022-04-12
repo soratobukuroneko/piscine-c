@@ -10,6 +10,7 @@ int main(void)
 	assert(ft_strstr(haystack, "") == strstr(haystack, ""));
 	assert(ft_strstr(haystack, "42 is amazing") == strstr(haystack, "42 is amazing"));
 	assert(ft_strstr(haystack, "not found") == strstr(haystack, "not found"));
+	assert(ft_strstr("", "hello") == strstr("", "hello"));
 
 	return 0;
 }
