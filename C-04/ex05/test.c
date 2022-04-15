@@ -14,5 +14,8 @@ int main(void)
 	assert(ft_atoi_base("aa", "a") == 0);
 	assert(ft_atoi_base("abc", "") == 0);
 	assert(ft_atoi_base("", "abc") == 0);
+	assert(ft_atoi_base("-2147483648", "0123456789") == -2147483648);
+	assert(ft_atoi_base("--2147483647", "0123456789") == 2147483647);
+
 	return 0;
 }
