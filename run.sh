@@ -4,6 +4,12 @@ TESTS_ROOT="`dirname $0`"
 TESTS_SERIE="$1"
 EXERCICE_ROOT="$2"
 
+norminette "$EXERCICE_ROOT" 1>/dev/null
+if [[ ! $? -eq 0 ]]
+then
+	echo NORME ERROR!
+fi
+
 for i in "$TESTS_ROOT/$TESTS_SERIE"/*
 do
 	EXERCICE="${i##*/}"
